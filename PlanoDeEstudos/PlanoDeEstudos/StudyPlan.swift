@@ -3,7 +3,6 @@
 //  PlanoDeEstudos
 //
 //  Created by Pedro Vilela on 07/09/21.
-//  Copyright © 2021 Eric Brito. All rights reserved.
 //
 
 import Foundation

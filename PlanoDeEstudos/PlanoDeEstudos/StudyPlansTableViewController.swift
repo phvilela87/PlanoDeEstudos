@@ -2,8 +2,7 @@
 //  NotificationsTableViewController.swift
 //  PlanoDeEstudos
 //
-//  Created by Eric Brito
-//  Copyright © 2017 Eric Brito. All rights reserved.
+//  Created by Pedro Vilela on 07/09/21.
 //
 
 import UIKit
@@ -19,12 +18,20 @@ class StudyPlansTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(onReceive(notification:)), name: NSNotification.Name(rawValue: "Confirmed"), object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
+    }
+    
+    @objc func onReceive(notification: Notification) {
+        if let userInfo = notification.userInfo, let id = userInfo["id"] as? String {
+            sm.setPlanDone(id: id)
+            tableView.reloadData()
+        }
     }
     
     // MARK: - Table view data source
@@ -39,11 +46,15 @@ class StudyPlansTableViewController: UITableViewController {
         cell.textLabel?.text = studyPlan.section
         cell.detailTextLabel?.text = dateFormatter.string(from: studyPlan.date)
         
+        cell.backgroundColor = studyPlan.done ? .green : .white
+        
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            sm.removePlan(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .bottom)
         }
     }
 

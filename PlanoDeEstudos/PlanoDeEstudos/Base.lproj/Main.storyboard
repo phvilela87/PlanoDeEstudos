@@ -79,7 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eIt-aK-ftw">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="eIt-aK-ftw">
                                 <rect key="frame" x="24" y="248" width="327" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="ggh-eJ-uaz"/>
@@ -110,8 +110,8 @@
                         <constraints>
                             <constraint firstItem="v0k-OF-19d" firstAttribute="top" secondItem="ifw-V1-3J6" secondAttribute="bottom" constant="22" id="1wt-f4-4nV"/>
                             <constraint firstItem="eIt-aK-ftw" firstAttribute="centerX" secondItem="PM4-FY-Xa4" secondAttribute="centerX" id="3av-HG-hLI"/>
+                            <constraint firstItem="v0k-OF-19d" firstAttribute="leading" secondItem="Ve1-og-XfH" secondAttribute="leading" constant="24" id="44k-gq-jgT"/>
                             <constraint firstItem="PM4-FY-Xa4" firstAttribute="leading" secondItem="Ve1-og-XfH" secondAttribute="leading" constant="24" id="ARj-rg-rSW"/>
-                            <constraint firstItem="Ve1-og-XfH" firstAttribute="trailing" secondItem="PM4-FY-Xa4" secondAttribute="trailing" constant="24" id="J7H-NO-jG8"/>
                             <constraint firstItem="ifw-V1-3J6" firstAttribute="width" secondItem="PM4-FY-Xa4" secondAttribute="width" id="M5f-oK-l2O"/>
                             <constraint firstItem="PM4-FY-Xa4" firstAttribute="top" secondItem="Ve1-og-XfH" secondAttribute="top" constant="24" id="MK6-ZJ-tku"/>
                             <constraint firstItem="ifw-V1-3J6" firstAttribute="centerX" secondItem="PM4-FY-Xa4" secondAttribute="centerX" id="Ohf-OB-t7T"/>
@@ -119,6 +119,7 @@
                             <constraint firstItem="J31-ew-4Wn" firstAttribute="top" secondItem="eIt-aK-ftw" secondAttribute="bottom" constant="16" id="Qcm-E0-J7a"/>
                             <constraint firstItem="J31-ew-4Wn" firstAttribute="centerX" secondItem="PM4-FY-Xa4" secondAttribute="centerX" id="W6l-0V-f9x"/>
                             <constraint firstItem="eIt-aK-ftw" firstAttribute="top" secondItem="v0k-OF-19d" secondAttribute="bottom" constant="10" id="XNu-wy-rno"/>
+                            <constraint firstItem="Ve1-og-XfH" firstAttribute="trailing" secondItem="v0k-OF-19d" secondAttribute="trailing" constant="24" id="bFV-Kk-lXz"/>
                             <constraint firstItem="eIt-aK-ftw" firstAttribute="width" secondItem="PM4-FY-Xa4" secondAttribute="width" id="qNP-Am-FsE"/>
                             <constraint firstItem="v0k-OF-19d" firstAttribute="width" secondItem="PM4-FY-Xa4" secondAttribute="width" id="t9s-zG-Reh"/>
                             <constraint firstItem="ifw-V1-3J6" firstAttribute="top" secondItem="PM4-FY-Xa4" secondAttribute="bottom" constant="10" id="uUU-Ee-8nn"/>

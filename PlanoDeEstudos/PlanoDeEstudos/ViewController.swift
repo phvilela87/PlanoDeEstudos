@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  PlanoDeEstudos
 //
-//  Created by Eric Brito
-//  Copyright © 2017 Eric Brito. All rights reserved.
+//  Created by Pedro Vilela on 07/09/21.
 //
 
 import UIKit
